@@ -1,7 +1,5 @@
 const crypto = require('crypto');
 const connection = require('../database/connection');
-
-
 module.exports = {
 
     async index(require, response) {
@@ -9,7 +7,6 @@ module.exports = {
     
         return response.json(ongs);
     }, // não esquecer de colocar a virgula
-
 
     async create(request, response){
         
@@ -20,10 +17,10 @@ module.exports = {
         id,
         name,
         email,
-        whatsapp,
+        whatsapp, 
         city,
         uf,
-    })
+    });
 
     return response.json({ id });
     }
